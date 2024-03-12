@@ -268,7 +268,11 @@ class CarInterface(CarInterfaceBase):
     elif candidate == CAR.GENESIS_G90_2019:
       ret.mass = 2150
       ret.wheelbase = 3.16
-      
+    elif candidate == CAR.CASPER:
+      ret.mass = 985. + STD_CARGO_KG
+      ret.wheelbase = 2.40
+      tire_stiffness_factor = 0.7
+      ret.centerToFront = ret.wheelbase * 0.4      
 
     # *** longitudinal control ***
     if candidate in CANFD_CAR:
