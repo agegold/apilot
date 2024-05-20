@@ -144,6 +144,7 @@ class CAR:
 
   K7 = "KIA K7 2016-2019"
   K7_HEV = "KIA K7 HEV 2016-2019"
+  KIA_MOHAVE = "KIA MOHAVE 2019"
 
 
 @dataclass
@@ -229,6 +230,8 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
     HyundaiCarInfo("Kia EV6 (without HDA II) 2022", "Highway Driving Assist", harness=Harness.hyundai_l),
     HyundaiCarInfo("Kia EV6 (with HDA II) 2022", "Highway Driving Assist II", harness=Harness.hyundai_p)
   ],
+  CAR.KIA_MOHAVE: HyundaiCarInfo("Kia Mohave 2019", harness=Harness.hyundai_e),
+
 
   # Genesis
   CAR.GENESIS_G70: HyundaiCarInfo("Genesis G70 2018-19", "All", harness=Harness.hyundai_f),
@@ -392,6 +395,9 @@ FINGERPRINTS = {
   }],
   CAR.CASPER: [{
     67: 8, 127: 8, 304: 8, 320: 8, 339: 8, 354: 8, 356: 4, 544: 8, 576: 8, 593: 8, 608: 8, 688: 6, 757: 8, 809: 8, 832: 8, 854: 8, 870: 7, 871: 8, 872: 8, 897: 8, 902: 8, 903: 8, 905: 8, 906: 8, 909: 8, 913: 8, 916: 8, 1011: 8, 1040: 8, 1042: 8, 1056: 8, 1057: 8, 1069: 8, 1078: 4, 1102: 8, 1107: 5, 1114: 8, 1124: 4, 1136: 8, 1145: 8, 1151: 8, 1155: 8, 1156: 8, 1157: 8, 1162: 8, 1164: 8, 1170: 8, 1173: 8, 1183: 8, 1191: 2, 1193: 8, 1225: 8, 1227: 8, 1260: 8, 1265: 4, 1280: 8, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1322: 8, 1342: 8, 1343: 8, 1345: 8, 1348: 8, 1363: 8, 1369: 8, 1379: 8, 1384: 8, 1394: 8, 1407: 8, 1419: 8, 1427: 6, 1446: 8, 1456: 4, 1470: 8, 1485: 8
+  }],
+  CAR.KIA_MOHAVE: [{
+    67: 8, 127: 8, 304: 8, 320: 8, 339: 8, 356: 4, 544: 8, 593: 8, 608: 8, 688: 5, 809: 8, 832: 8, 854: 8, 870: 7, 871: 8, 872: 8, 897: 8, 902: 8, 905: 8, 909: 8, 913: 8, 916: 8, 1040: 8, 1056: 8, 1057: 8, 1064: 8, 1078: 4, 1107: 5, 1123: 8, 1136: 8, 1145: 8, 1151: 8, 1155: 8, 1156: 8, 1157: 4, 1162: 8, 1164: 8, 1168: 8, 1170: 8, 1173: 8, 1180: 8, 1186: 2, 1191: 2, 1193: 8, 1210: 8, 1225: 8, 1227: 8, 1265: 4, 1280: 8, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1322: 8, 1342: 6, 1345: 8, 1348: 8, 1363: 8, 1369: 8, 1371: 8, 1378: 8, 1384: 8, 1407: 8, 1419: 8, 1427: 6, 1456: 4, 1470: 8, 1479: 8
   }],
 }
 
@@ -1588,7 +1594,7 @@ FEATURES = {
                   CAR.IONIQ_EV_2020, CAR.IONIQ_PHEV, CAR.KIA_CEED, CAR.KIA_SELTOS, CAR.KONA_EV, CAR.KONA_EV_2022,
                   CAR.ELANTRA_2021, CAR.ELANTRA_HEV_2021, CAR.SONATA_HYBRID, CAR.KONA_HEV, CAR.SANTA_FE_2022,
                   CAR.KIA_K5_2021, CAR.IONIQ_HEV_2022, CAR.SANTA_FE_HEV_2022, CAR.GENESIS_G70_2020, CAR.SANTA_FE_PHEV_2022,
-                  CAR.KIA_STINGER_2022, CAR.SANTA_FE, CAR.NEXO, CAR.HYUNDAI_GENESIS, CAR.TUCSON_TL_SCC, CAR.KIA_SOUL_EV_SK3, CAR.CASPER},
+                  CAR.KIA_STINGER_2022, CAR.SANTA_FE, CAR.NEXO, CAR.HYUNDAI_GENESIS, CAR.TUCSON_TL_SCC, CAR.KIA_SOUL_EV_SK3, CAR.CASPER, CAR.KIA_MOHAVE},
 
 }
 
@@ -1671,6 +1677,7 @@ DBC = {
   CAR.K7_HEV: dbc_dict('hyundai_kia_generic', None),
   CAR.GENESIS_GV70_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.CASPER: dbc_dict('hyundai_kia_generic', None),
+  CAR.KIA_MOHAVE: dbc_dict('hyundai_kia_generic', None),
 }
 
 
