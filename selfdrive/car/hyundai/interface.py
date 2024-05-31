@@ -272,7 +272,13 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 985. + STD_CARGO_KG
       ret.wheelbase = 2.40
       tire_stiffness_factor = 0.7
-      ret.centerToFront = ret.wheelbase * 0.4      
+      ret.centerToFront = ret.wheelbase * 0.4
+    elif candidate  in (CAR.PORTER_EV, CAR.KIA_BONGO_EV):
+      ret.mass = 3228. + STD_CARGO_KG
+      ret.wheelbase = 2.85
+      tire_stiffness_factor = 0.7
+      ret.centerToFront = ret.wheelbase * 0.4
+
 
     # *** longitudinal control ***
     if candidate in CANFD_CAR:
