@@ -278,6 +278,9 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = 2.85
       tire_stiffness_factor = 0.7
       ret.centerToFront = ret.wheelbase * 0.4
+    elif candidate == CAR.MORNING:
+      ret.mass = 1000
+      ret.wheelbase = 2.4
 
 
     # *** longitudinal control ***
