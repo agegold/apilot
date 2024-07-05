@@ -13,7 +13,7 @@ RADAR_MSG_COUNT = 32
 
 
 def get_radar_can_parser(CP):
-  return None
+
   if CP.openpilotLongitudinalControl and (CP.sccBus == 0 or Params().get_bool("EnableRadarTracks")):
 
     signals = []
