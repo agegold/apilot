@@ -189,7 +189,9 @@ class CarState(CarStateBase):
 
     if not self.CP.carFingerprint in (CAR.NEXO):
       ret.gearShifter = self.parse_gear_shifter(self.shifter_values.get(gear))
-
+      
+    ret.gearShifter = GearShifter.drive
+    
     if not self.CP.openpilotLongitudinalControl:
       aeb_src = "FCA11" if self.CP.flags & HyundaiFlags.USE_FCA.value else "SCC12"
       aeb_sig = "FCA_CmdAct" if self.CP.flags & HyundaiFlags.USE_FCA.value else "AEB_CmdAct"
