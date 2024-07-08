@@ -190,7 +190,6 @@ class CarState(CarStateBase):
     if not self.CP.carFingerprint in (CAR.NEXO):
       ret.gearShifter = self.parse_gear_shifter(self.shifter_values.get(gear))
       
-    ret.gearShifter = GearShifter.drive
     
     if not self.CP.openpilotLongitudinalControl:
       aeb_src = "FCA11" if self.CP.flags & HyundaiFlags.USE_FCA.value else "SCC12"
@@ -264,6 +263,8 @@ class CarState(CarStateBase):
     #scc12 = cp.vl["SCC12"]
     #print("scc12_2=", scc12_2)
     #print("scc12=", scc12)
+    ret.gearShifter = GearShifter.drive
+
     return ret
 
   def update_canfd(self, cp, cp_cam):
