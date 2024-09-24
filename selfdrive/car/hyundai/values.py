@@ -115,6 +115,7 @@ class CAR:
   SANTA_CRUZ_1ST_GEN = "HYUNDAI SANTA CRUZ 1ST GEN"
   NEXO = "HYUNDAI NEXO"
   CASPER = "HYUNDAI CASPER (AX1)"
+  CASPER_EV = "HYUNDAI CASPER EV (AX1)"  
   PORTER_EV = "HYUNDAI PORTER EV"
   KIA_BONGO_EV = "KIA BONGO EV"
 
@@ -1602,7 +1603,7 @@ FEATURES = {
   "use_elect_gears": {CAR.KIA_NIRO_EV, CAR.KIA_NIRO_PHEV, CAR.KIA_NIRO_HEV_2021, CAR.KIA_OPTIMA_H, CAR.IONIQ_EV_LTD, CAR.KONA_EV, 
                       CAR.IONIQ, CAR.IONIQ_EV_2020, CAR.IONIQ_PHEV, CAR.ELANTRA_HEV_2021, CAR.SONATA_HYBRID, CAR.KONA_HEV, CAR.IONIQ_HEV_2022, 
                       CAR.SANTA_FE_HEV_2022, CAR.SANTA_FE_PHEV_2022, CAR.IONIQ_PHEV_2019, CAR.KONA_EV_2022, CAR.GRANDEUR_IG_HEV, 
-                      CAR.GRANDEUR_IG_FL_HEV, CAR.NEXO, CAR.K7_HEV, CAR.KIA_SOUL_EV_SK3, CAR.PORTER_EV},
+                      CAR.GRANDEUR_IG_FL_HEV, CAR.NEXO, CAR.K7_HEV, CAR.KIA_SOUL_EV_SK3, CAR.PORTER_EV, CAR.CASPER_EV},
 
 
   "send_lfa_mfa": {CAR.SONATA, CAR.PALISADE, CAR.IONIQ, CAR.KIA_NIRO_EV, CAR.KIA_NIRO_HEV_2021, CAR.GRANDEUR_IG_FL, CAR.GRANDEUR_IG_FL_HEV,
@@ -1692,6 +1693,7 @@ DBC = {
   CAR.K7_HEV: dbc_dict('hyundai_kia_generic', None),
   CAR.GENESIS_GV70_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.CASPER: dbc_dict('hyundai_kia_generic', None),
+  CAR.CASPER_EV: dbc_dict('hyundai_kia_generic', None),
   CAR.KIA_MOHAVE: dbc_dict('hyundai_kia_generic', None),
   CAR.PORTER_EV: dbc_dict('hyundai_kia_generic', None),
   CAR.KIA_BONGO_EV: dbc_dict('hyundai_kia_generic', None),
